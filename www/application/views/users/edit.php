@@ -351,8 +351,9 @@ if ($userlogin->hasRights('user_edit_all')) {
         foreach ($this->group_db->getAllGroups() as $group) {
             $checked = FALSE;
             if (in_array($group->group_id,$user->group_ids)) $checked=TRUE;
-            echo "<tr><td>".$group->name."</td><td>".form_checkbox('group_'.$group->group_id, 'group_'.$group->group_id, $checked)."</td></tr>";
-        }
+         #   echo "<tr><td>".$group->name."</td><td>".form_checkbox('group_'.$group->group_id, 'group_'.$group->group_id, $checked)."</td></tr>";
+	}	echo "<tr><td>Allow user to add new publication/author/topic.</td><td><input type='checkbox' name='group_4' value='group_4' checked='checked'  /></td></tr>";
+        
 }
 
         
